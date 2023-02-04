@@ -6,7 +6,7 @@ lib = library(identifier: 'jenkins@test-artifacts-upload', retriever: modernSCM(
 standardReleasePipelineWithGenericTrigger(
     tokenIdCredential: 'jenkins-reporting-cli-generic-webhook-token',
     causeString: 'A tag was cut on opensearch-project/opensearch-js repository causing this workflow to run',
-    downloadReleaseAsset: true
+    downloadReleaseAsset: true,
     publishRelease: true) {
         // publishToNpm(repository: 'https://github.com/opensearch-project/reporting-cli', tag: "$tag")
         publishToArtifactsProdBucket(
