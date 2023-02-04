@@ -14,7 +14,7 @@ jobs:
       - name: Build and package
         run: |
           npm pack
-          filename= `ls opensearch-project-reporting-cli-*.tgz | sed 's/-project//g'`
+          filename=`ls opensearch-project-reporting-cli-*.tgz | sed 's/-project//g'`
           mkdir reporting-cli && mv opensearch-project-reporting-cli-*.tgz reporting-cli/$filename
           tar -cvf artifacts.tar.gz reporting-cli
       - name: Draft a release
