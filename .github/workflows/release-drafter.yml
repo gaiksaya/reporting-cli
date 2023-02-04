@@ -21,6 +21,8 @@ jobs:
           tar -cvf artifacts.tar.gz reporting-cli
       - name: Draft a release
         uses: softprops/action-gh-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           draft: true
           generate_release_notes: true
