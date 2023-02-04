@@ -11,7 +11,7 @@ standardReleasePipelineWithGenericTrigger(
         // publishToNpm(repository: 'https://github.com/opensearch-project/reporting-cli', tag: "$tag")
         publishToArtifactsProdBucket(
             roleName: 'gaiksaya-fork-public-role',
-            source: 'reporting-cli/opensearch-reporting-cli-1.0.0.tgz',
+            source: 'reporting-cli/opensearch-reporting-cli-1.1.0.tgz',
             destination: 'reporting-cli/opensearch-reporting-cli-2.0.0-tar.gz',
             signingPlatform: 'pgp',
             sigType: '.sig'
