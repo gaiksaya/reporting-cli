@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
+      content: write
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
@@ -21,8 +22,6 @@ jobs:
           tar -cvf artifacts.tar.gz reporting-cli
       - name: Draft a release
         uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           draft: true
           generate_release_notes: true
