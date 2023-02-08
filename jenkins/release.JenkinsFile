@@ -14,7 +14,7 @@ standardReleasePipelineWithGenericTrigger(
         )
         publishToArtifactsProdBucket(
             assumedRoleName: 'reporting-cli-artifacts-upload-role',
-            source: 'reporting-cli',
+            source: "${WORKSPACE}/reporting-cli",
             destination: 'reporting-cli',
             signingPlatform: 'linux',
             sigType: '.sig'
